@@ -7,14 +7,14 @@ Here you can find some examples of my solutions to API testing in Postman using 
 ---
 
 ### Task 1:
-Send GET, POST requests. Write tests to check: 
+Write tests to check: 
 - response status code 
 - response body contains a valid string
 - response contains a parameter 
-- the value of the parameter in the response, the value is taken from the request
+- the value in the response is equal to the value from the request
 - array element values
 
-The full description of the task (in Russian) can be found here: 
+The full description of the task can be found here: 
 
 [Full task description](https://github.com/kangash/Postman/blob/main/Task%201/Task%201%20Description.txt)
 
