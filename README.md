@@ -6,7 +6,7 @@ Here you can find some examples of my solutions to API testing in Postman using 
 
 ---
 
-### Task 1:
+### Task 1
 Write tests to check: 
 - response status code 
 - response body contains a valid string
@@ -18,14 +18,16 @@ The full description of the task can be found here:
 
 [Full task description](https://github.com/kangash/Postman/blob/main/Task%201/Task%201%20Description.txt)
 
-### Solution:
+### Solution
+
+I used to solve the task:
 
 - autotests in JavaScript
-- parsing requests and responses 
+- parsing request and response
 - for and for...in JS loops
 - output the parameter values to the console
 - collection environment to simplify requests
 
-Follow the link to find the collection and environment files that you can import into Postman:
+Follow the link to see the solution. There you will find a collection and environment files to import into Postman:
 
 [Postman Collection and Environment files](https://github.com/kangash/Postman/tree/main/Task%201)
