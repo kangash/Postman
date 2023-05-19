@@ -128,3 +128,77 @@ pm.test("Check dog name", function () {
 pm.test("Check dog age", function () {
     pm.expect(resp.family.pets.dog.age).to.have.eql(4);
 });
+
+
+
+﻿// http://162.55.220.72:5005/object_info_4
+
+// 1. Проверить статус код 200
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+// 2. Спарсить response body в json
+let resp = pm.response.json();
+let resp_name = resp.name;
+let resp_age = +resp.age;
+let resp_salary = resp.salary;
+let resp_salary_0 = resp.salary[0];
+let resp_salary_1 = +resp.salary[1];
+let resp_salary_2 = +resp.salary[2];
+
+// 3. Спарсить request
+let req = pm.request.url.query.toObject();
+let req_name = req.name;
+let req_age = +req.age;
+let req_salary = +req.salary;
+
+// 4. Проверить, что name в ответе равно name из request
+pm.test("Check request name", function () {
+        pm.expect(resp_name).to.eql(req_name);
+});
+
+// 5. Проверить, что age в ответе равно age из request
+pm.test("Check request age", function () {
+        pm.expect(resp_age).to.eql(req_age);
+});
+
+// 6. Вывести в консоль параметр salary из request
+console.log(req.salary);
+
+// 7. Вывести в консоль параметр salary из response
+console.log(resp.salary);
+
+// 8. Вывести в консоль 0-й элемент параметра salary из response
+console.log(resp.salary[0]);
+
+// 9. Вывести в консоль 1-й элемент параметра salary из response
+console.log(resp.salary[1]);
+
+// 10. Вывести в консоль 2-й элемент параметра salary из response
+console.log(resp.salary[2]);
+
+// 11. Проверить, что 0-й элемент параметра salary равен salary из request
+pm.test("Check salary 0 element", function () {
+        pm.expect(resp_salary_0).to.eql(req_salary);
+});
+
+// 12. Проверить, что 1-й элемент параметра salary равен salary*2 (salary забрать из request)
+pm.test("Check salary 1 element", function () {
+        pm.expect(resp_salary_1).to.eql(req_salary*2);
+});
+
+// 13. Проверить, что 2-й элемент параметра salary равен salary*3 (salary забрать из request)
+pm.test("Check salary 2 element", function () {
+        pm.expect(resp_salary_2).to.eql(req_salary*3);
+});
+
+// 14. Написать цикл который выведет в консоль по порядку элементы из параметра salary
+for (let salary of resp_salary) {
+    console.log(salary);
+};
+
+// 15. Создать в окружении переменные name, age и salary и передать в них значения из request
+pm.environment.set("name", req_name);
+pm.environment.set("age", req_age);
+pm.environment.set("salary", req_salary);
