@@ -13,7 +13,7 @@ Write tests to check response status code, response body has the required parame
 
 ### Solution
 
-I parsed request and response, wrote tests in JavaScript, used for and for...in loops to handle arrays and objects. All the tests were passed ✅
+I parsed request and response, wrote tests in JavaScript, used for and for...in loops to handle arrays and objects. <br> All the tests were passed ✅
 
 
 
