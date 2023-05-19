@@ -13,14 +13,8 @@ Write tests to check response status code, response body has the required parame
 
 ### Solution
 
-I used to solve the task:
+I parsed request and response, wrote tests in JavaScript, used for and for...in loops to handle arrays and objects. All the tests were passed ✅
 
-- autotests in JavaScript
-- parsing request and response
-- for and for...in JS loops
-- output the parameter values to the console
-- collection environment to simplify requests
 
-Follow the link to see the solution. There you will find a collection and environment files to import into Postman:
 
 [Postman Collection and Environment files](https://github.com/kangash/Postman/tree/main/Task%201)
