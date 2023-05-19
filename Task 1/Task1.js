@@ -1,4 +1,4 @@
-﻿// GET http://162.55.220.72:5005/first
+// GET http://162.55.220.72:5005/first
 
 // 1. Проверить статус код 200
 pm.test("Status code is 200", function () {
@@ -12,7 +12,7 @@ pm.test("Body matches string", function () {
 
 
 
-﻿// POST http://162.55.220.72:5005/user_info_3
+// POST http://162.55.220.72:5005/user_info_3
 
 // 1. Проверить статус код 200
 pm.test("Status code is 200", function () {
@@ -72,7 +72,7 @@ pm.test("Check request u_salary_1_5_year", function () {
 
 
 
-﻿// GET http://162.55.220.72:5005/object_info_3
+// GET http://162.55.220.72:5005/object_info_3
 
 // 1. Проверить статус код 200
 pm.test("Status code is 200", function () {
@@ -131,7 +131,7 @@ pm.test("Check dog age", function () {
 
 
 
-﻿// GET http://162.55.220.72:5005/object_info_4
+// GET http://162.55.220.72:5005/object_info_4
 
 // 1. Проверить статус код 200
 pm.test("Status code is 200", function () {
@@ -205,7 +205,7 @@ pm.environment.set("salary", req_salary);
 
 
 
-﻿// POST http://162.55.220.72:5005/user_info_2
+// POST http://162.55.220.72:5005/user_info_2
 // Использовать параметры name, age и salary из окружения в request
 
 // 1. Проверить статус код 200
