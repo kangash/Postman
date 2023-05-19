@@ -11,6 +11,7 @@ pm.test("Body matches string", function () {
 });
 
 
+
 ﻿// http://162.55.220.72:5005/user_info_3
 
 // 1. Проверить статус код 200
@@ -67,4 +68,63 @@ console.log(resp.family);
 // 11. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
 pm.test("Check request u_salary_1_5_year", function () {
         pm.expect(resp.family.u_salary_1_5_year).to.eql(req_salary_1_5);
+});
+
+
+
+﻿// http://162.55.220.72:5005/object_info_3
+
+// 1. Проверить статус код 200
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+
+// 2. Спарсить response body в json
+let resp = pm.response.json();
+let resp_name = resp.name;
+let resp_age = +resp.age;
+let resp_salary = resp.salary;
+
+// 3. Спарсить request
+let req = pm.request.url.query.toObject();
+let req_name = req.name;
+let req_age = +req.age;
+let req_salary = +req.salary;
+
+// 4. Проверить, что name в ответе равно name из request
+pm.test("Check request name", function () {
+        pm.expect(resp_name).to.eql(req_name);
+});
+
+// 5. Проверить, что age в ответе равно age из request
+pm.test("Check request age", function () {
+        pm.expect(resp_age).to.eql(req_age);
+});
+
+// 6. Проверить, что salary в ответе равно salary из request
+pm.test("Check request salary", function () {
+        pm.expect(resp.salary).to.eql(req_salary);
+});
+
+// 7. Вывести в консоль параметр family из response
+console.log(resp.family);
+
+// 8. Проверить, что у параметра dog есть параметр name
+pm.test("Check dog has name", function () {
+    pm.expect(resp.family.pets.dog).to.have.property('name');
+});
+
+// 9. Проверить, что у параметра dog есть параметр age
+pm.test("Check dog has age", function () {
+    pm.expect(resp.family.pets.dog).to.have.property('age');
+});
+
+// 10. Проверить, что параметр name имеет значение Luky
+pm.test("Check dog name", function () {
+    pm.expect(resp.family.pets.dog.name).to.have.eql('Luky');
+});
+
+// 11. Проверить, что параметр age имеет значение 4
+pm.test("Check dog age", function () {
+    pm.expect(resp.family.pets.dog.age).to.have.eql(4);
 });
