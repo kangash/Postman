@@ -7,7 +7,7 @@ Here you can find some examples of my solutions to API testing in Postman using 
 ---
 
 ## Task 1
-Write tests to check response status code, response body contains a valid value, etc.
+Write tests to check response status code, response body has the required parameter and the valid value, etc.
 
 [Full task description](https://github.com/kangash/Postman/blob/main/Task%201/Task%201%20Description.txt)
 
