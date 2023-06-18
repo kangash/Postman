@@ -65,7 +65,7 @@ pm.test("Check request salary", function () {
 // 10. Вывести в консоль параметр family из response
 console.log(resp.family);
 
-// 11. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
+// 11. Проверить что u_salary_1_5_year в ответе равно salary*4 из request
 pm.test("Check request u_salary_1_5_year", function () {
         pm.expect(resp.family.u_salary_1_5_year).to.eql(req_salary_1_5);
 });
