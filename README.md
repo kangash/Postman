@@ -3,7 +3,7 @@
 ![Postman logo](https://img.shields.io/badge/Postman-090909?style=for-the-badge&logo=postman)
 ![JS logo](https://img.shields.io/badge/JavaScript-090909?style=for-the-badge&logo=JavaScript)
 
-Here you can find my API testing examples using JavaScript automated tests in Postman.
+Here you can find some cases of API testing in Postman.
 
 ---
 
