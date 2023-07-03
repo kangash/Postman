@@ -15,7 +15,7 @@ Write tests to check response status code, response body has the required parame
 
 - [JS File](https://github.com/kangash/Postman/blob/main/case_1/case_1.js) - easy-to-read JavaScript file that contains the autotests from Postman.
 
-- [Postman Collection and Environment files](https://github.com/kangash/Postman/tree/main/case_1) - files to import into Postman for a more detailed review.
+- [Postman Collection and Environment files](https://github.com/kangash/Postman/tree/main/case_1) - for a more detailed review.
 
 I parsed request and response, wrote tests in JavaScript, used `for` and `for...in` loops to handle arrays and objects. <br> All the tests were passed ✅
 
