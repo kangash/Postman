@@ -1,0 +1,189 @@
+{
+	"info": {
+		"_postman_id": "97c4b6e1-4b79-43b1-90db-348cc9f87497",
+		"name": "case_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20321287"
+	},
+	"item": [
+		{
+			"name": "Link Checker",
+			"item": [
+				{
+					"name": "Get Main Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://a0406371.xsph.ru/",
+							"protocol": "http",
+							"host": [
+								"a0406371",
+								"xsph",
+								"ru"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get About Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://a0406371.xsph.ru/%d0%be-%d0%bd%d0%b0%d1%81/",
+							"protocol": "http",
+							"host": [
+								"a0406371",
+								"xsph",
+								"ru"
+							],
+							"path": [
+								"%d0%be-%d0%bd%d0%b0%d1%81",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Blog Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://a0406371.xsph.ru/%d0%b1%d0%bb%d0%be%d0%b3/",
+							"protocol": "http",
+							"host": [
+								"a0406371",
+								"xsph",
+								"ru"
+							],
+							"path": [
+								"%d0%b1%d0%bb%d0%be%d0%b3",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Contact Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://a0406371.xsph.ru/%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d1%8b/",
+							"protocol": "http",
+							"host": [
+								"a0406371",
+								"xsph",
+								"ru"
+							],
+							"path": [
+								"%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d1%8b",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Login Page",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://a0406371.xsph.ru/wp-login.php?pass=1",
+							"protocol": "http",
+							"host": [
+								"a0406371",
+								"xsph",
+								"ru"
+							],
+							"path": [
+								"wp-login.php"
+							],
+							"query": [
+								{
+									"key": "pass",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
