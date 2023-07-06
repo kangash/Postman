@@ -20,3 +20,7 @@ Write tests to check response status code, response body has the required parame
 I parsed request and response, wrote tests in JavaScript, used `for` and `for...in` loops to handle arrays and objects. <br> All the tests were passed ✅
 
 ---
+
+### Case 2
+
+Write test to automate API testing in Postman for the blog web app.
