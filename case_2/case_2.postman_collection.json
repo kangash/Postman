@@ -184,6 +184,26 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Post Comment by Random User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://a0406371.xsph.ru/wp-comments-post.php",
+					"protocol": "http",
+					"host": [
+						"a0406371",
+						"xsph",
+						"ru"
+					],
+					"path": [
+						"wp-comments-post.php"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
