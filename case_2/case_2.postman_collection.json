@@ -314,6 +314,25 @@
 						],
 						"type": "text/javascript"
 					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Post has a new comment\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(pm.environment.get(\"comment\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"User is authorized\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"logged-in-as\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
 				}
 			],
 			"request": {
