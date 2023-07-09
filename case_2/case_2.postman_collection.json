@@ -420,7 +420,14 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							""
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Error text is correct\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"ОШИБКА\");\r",
+							"    pm.expect(pm.response.text()).to.include(\": пожалуйста, заполните необходимые поля (имя, e-mail).\");\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
