@@ -392,6 +392,81 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Post Comment without Author",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "test@test.com",
+							"type": "text"
+						},
+						{
+							"key": "url",
+							"value": "",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "{{comment}}",
+							"type": "text"
+						},
+						{
+							"key": "submit",
+							"value": "Отправить комментарий",
+							"type": "text"
+						},
+						{
+							"key": "comment_post_ID",
+							"value": "62",
+							"type": "text"
+						},
+						{
+							"key": "comment_parent",
+							"value": "0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://a0406371.xsph.ru/wp-comments-post.php",
+					"protocol": "http",
+					"host": [
+						"a0406371",
+						"xsph",
+						"ru"
+					],
+					"path": [
+						"wp-comments-post.php"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
