@@ -24,3 +24,9 @@ I parsed request and response, wrote tests in JavaScript, used `for` and `for...
 ### Case 2
 
 Write test to automate API testing in Postman for the blog web app.
+
+### Solution
+
+- [JS File](https://github.com/kangash/Postman/blob/main/case_2/case_2.js) - easy-to-read JavaScript file that contains the autotests from Postman.
+
+- [Postman Collection and Environment files](https://github.com/kangash/Postman/tree/main/case_2) - for a more detailed review.
