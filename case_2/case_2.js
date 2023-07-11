@@ -6,6 +6,27 @@ pm.test('Status code is 200', function () {
 
 // Задание 2. Написать тест, который проверяет добавление случайного комментария случайным пользователем. Тест должен проверить, что ответ 200, на странице присутствует ваш комментарий и анонимный автор.
 
+// Pre-request Script
+
+function createGuid() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+    const r = (Math.random() * 16) | 0,
+      v = c == 'x' ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+}
+
+let author = createGuid();
+let comment = createGuid();
+
+console.log(author);
+console.log(comment);
+
+pm.environment.set('author', author);
+pm.environment.set('comment', comment);
+
+// Tests
+
 pm.test('Status code is 200', function () {
   pm.response.to.have.status(200);
 });
