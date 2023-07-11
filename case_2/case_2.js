@@ -41,6 +41,23 @@ pm.test('Comment has a required author', function () {
 
 // Задание 3. Написать тест, который проверяет добавление случайного комментария зарегистрированным пользователем.  Тест должен проверить, что ответ 200, на странице присутствует ваш комментарий и зарегистрированный автор.
 
+// Pre-request Script
+
+function createGuid() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+    const r = (Math.random() * 16) | 0,
+      v = c == 'x' ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+}
+
+let comment = createGuid();
+console.log(comment);
+
+pm.environment.set('comment', comment);
+
+// Tests
+
 pm.test('Status code is 200', function () {
   pm.response.to.have.status(200);
 });
