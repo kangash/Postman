@@ -72,6 +72,22 @@ pm.test('User is authorized', function () {
 
 // Задание 4. Написать 2 теста, которые будут проверять обработку ошибок в случаях, если отправить запрос на создание анонимного комментария без указания автора или емейла. Проверить, что ответ 200, но возвращает нужный текст ошибки.
 
+// Pre-request Script
+
+function createGuid() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+    const r = (Math.random() * 16) | 0,
+      v = c == 'x' ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+}
+
+let comment = createGuid();
+console.log(comment);
+pm.environment.set('comment', comment);
+
+// Tests
+
 pm.test('Status code is 200', function () {
   pm.response.to.have.status(200);
 });
