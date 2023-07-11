@@ -33,3 +33,14 @@ pm.test('User is authorized', function () {
 });
 
 // Задание 4. Написать 2 теста, которые будут проверять обработку ошибок в случаях, если отправить запрос на создание анонимного комментария без указания автора или емейла. Проверить, что ответ 200, но возвращает нужный текст ошибки.
+
+pm.test('Status code is 200', function () {
+  pm.response.to.have.status(200);
+});
+
+pm.test('Error text is correct', function () {
+  pm.expect(pm.response.text()).to.include('ОШИБКА');
+  pm.expect(pm.response.text()).to.include(
+    ': пожалуйста, заполните необходимые поля (имя, e-mail).'
+  );
+});
