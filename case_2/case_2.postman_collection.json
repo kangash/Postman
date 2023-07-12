@@ -591,7 +591,23 @@
 					"listen": "prerequest",
 					"script": {
 						"exec": [
-							""
+							"function createGuid() {\r",
+							"    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'\r",
+							"    .replace(/[xy]/g, function (c) {\r",
+							"        const r = Math.random() * 16 | 0, \r",
+							"            v = c == 'x' ? r : (r & 0x3 | 0x8);\r",
+							"        return v.toString(16);\r",
+							"    });\r",
+							"}\r",
+							"\r",
+							"let title = createGuid();\r",
+							"let content = createGuid();\r",
+							"\r",
+							"console.log(title);\r",
+							"console.log(content);\r",
+							"\r",
+							"pm.environment.set(\"title\", title);\r",
+							"pm.environment.set(\"content\", content);"
 						],
 						"type": "text/javascript"
 					}
@@ -612,12 +628,12 @@
 					"basic": [
 						{
 							"key": "password",
-							"value": "p@r0L123futyn",
+							"value": "@OXXZGrj%FG(PsVn",
 							"type": "string"
 						},
 						{
 							"key": "username",
-							"value": "akey8@mail.ru",
+							"value": "axuhuz@mailto.plus",
 							"type": "string"
 						}
 					]
