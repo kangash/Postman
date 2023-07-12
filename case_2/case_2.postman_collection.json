@@ -616,7 +616,17 @@
 					"listen": "test",
 					"script": {
 						"exec": [
-							""
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"New post has a title\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(pm.environment.get(\"title\"));\r",
+							"});\r",
+							"\r",
+							"pm.test(\"New post has a content\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(pm.environment.get(\"content\"));\r",
+							"});"
 						],
 						"type": "text/javascript"
 					}
