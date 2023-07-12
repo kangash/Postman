@@ -626,10 +626,26 @@
 				"header": [],
 				"body": {
 					"mode": "formdata",
-					"formdata": []
+					"formdata": [
+						{
+							"key": "content",
+							"value": "{{content}}",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "publish",
+							"type": "text"
+						},
+						{
+							"key": "title",
+							"value": "{{title}}",
+							"type": "text"
+						}
+					]
 				},
 				"url": {
-					"raw": "http://a0406371.xsph.ru/wp-json/wp/v2/posts/",
+					"raw": "http://a0406371.xsph.ru/wp-json/wp/v2/posts/?_locale=user",
 					"protocol": "http",
 					"host": [
 						"a0406371",
@@ -642,6 +658,12 @@
 						"v2",
 						"posts",
 						""
+					],
+					"query": [
+						{
+							"key": "_locale",
+							"value": "user"
+						}
 					]
 				}
 			},
