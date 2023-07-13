@@ -119,3 +119,17 @@ console.log(content);
 
 pm.environment.set('title', title);
 pm.environment.set('content', content);
+
+// Tests
+
+pm.test('Status code is 201', function () {
+  pm.response.to.have.status(201);
+});
+
+pm.test('New post has a title', function () {
+  pm.expect(pm.response.text()).to.include(pm.environment.get('title'));
+});
+
+pm.test('New post has a content', function () {
+  pm.expect(pm.response.text()).to.include(pm.environment.get('content'));
+});
