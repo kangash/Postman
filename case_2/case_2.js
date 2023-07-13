@@ -100,3 +100,22 @@ pm.test('Error text is correct', function () {
 });
 
 // Задание 5. Написать тест, который будет добавлять новую запись (пост) на сайт и проверять, что она добавилась успешно: 200 ответ, текст соответствует указанному в тесте.
+
+// Pre-request Script
+
+function createGuid() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+    const r = (Math.random() * 16) | 0,
+      v = c == 'x' ? r : (r & 0x3) | 0x8;
+    return v.toString(16);
+  });
+}
+
+let title = createGuid();
+let content = createGuid();
+
+console.log(title);
+console.log(content);
+
+pm.environment.set('title', title);
+pm.environment.set('content', content);
